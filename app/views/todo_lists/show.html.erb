@@ -1,0 +1,21 @@
+<div class="card-header d-flex justify-content-between">
+  <span><h4> <%= @todo_list.title %></h4></span>
+  <%= link_to 'Edit', edit_todo_list_path(@todo_list), class: 'btn btn-secondary' %>
+</div>
+<ul class="list-group">
+  <% @todo_list.todo_items.each do |todo_item| %>
+    <li class="list-group-item">
+      <div class="d-flex justify-content-between">
+        <span>
+          <%= link_to todo_item.description %>
+        </span>
+        <%= link_to '#', class: 'btn btn-success ' do %>
+        V
+        <% end %>
+      </div>
+
+    </li>
+  <% end %>
+</ul>
+
+
