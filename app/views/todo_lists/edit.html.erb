@@ -1,6 +1,7 @@
-<h1>Editing Todo List</h1>
-
-<%= render 'form', todo_list: @todo_list %>
-
-<%= link_to 'Show', @todo_list %> |
-<%= link_to 'Back', todo_lists_path %>
+<div class="card-header d-flex justify-content-between">
+  <h5 class="m-0">Редактировать список задач</h5>
+  <div><%= link_to 'На главную', todo_lists_path , class: 'btn btn-secondary' %></div>
+</div>
+<div class="card-body">
+  <%= render 'form', todo_list: @todo_list %>
+</div>

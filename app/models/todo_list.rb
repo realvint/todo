@@ -30,7 +30,7 @@ class TodoList < ApplicationRecord
     when 0
       'badge bg-primary'
     when 100
-      'badge bg-success'
+      'badge bg-info'
     else
       'badge bg-warning text-dark'
     end
