@@ -19,8 +19,13 @@
           </p>
         </div>
         <div>
-          <%= link_to 'На главную', todo_lists_path , class: 'btn btn-secondary' %>
-          <%= link_to 'Редактировать', edit_todo_list_path(@todo_list), class: 'btn btn-secondary' %>
+          <%= link_to todo_lists_path, class: 'btn btn-outline-dark' do %>
+            <i class="fas fa-home"></i>
+          <% end %>
+
+          <%= link_to edit_todo_list_path(@todo_list), class: 'btn btn-outline-dark' do %>
+            <i class="fas fa-edit"></i>
+          <% end %>
         </div>
       </div>
     </div>
